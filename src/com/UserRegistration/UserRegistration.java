@@ -34,11 +34,26 @@ public class UserRegistration {
 		}
 	}
 
+	public void ValidateEmail() {
+		String expression = "^[a-zA-Z0-9]+([.+-_][a-zA-Z0-9]+)*@[a-zA-Z0-9]+.[a-z]{2,4}([.][a-z]{2})*$";
+
+		System.out.println("Enter  Email id :");
+		String email = sc.next();
+
+		if (email.matches(expression)) {
+			System.out.println("Email Validation Success");
+		} else {
+			System.out.println("Invalid Email id Try again");
+			ValidateEmail();
+		}
+	}
+
 	public static void main(String[] args) {
 		System.out.println("Welcome to User Registration");
 
 		UserRegistration user = new UserRegistration();
 		user.ValidateFirstName();
 		user.ValidateLastName();
+		user.ValidateEmail();
 	}
 }
