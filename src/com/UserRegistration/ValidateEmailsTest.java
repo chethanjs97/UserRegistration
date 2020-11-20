@@ -9,12 +9,12 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 @RunWith(Parameterized.class)
-public class ValidateEmails {
+public class ValidateEmailsTest {
 	private String email;
 	String expectedResult;
 	private UserRegistration userEmail;
 
-	public ValidateEmails(String email, String expectedResult) {
+	public ValidateEmailsTest(String email, String expectedResult) {
 		this.email = email;
 		this.expectedResult = expectedResult;
 	}
